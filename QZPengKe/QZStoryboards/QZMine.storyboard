@@ -12,7 +12,7 @@
         <!--Navigtaion Controller-->
         <scene sceneID="1pj-oC-Ake">
             <objects>
-                <navigationController id="koW-4g-3kR" customClass="QZNavigtaionController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mineNav" id="koW-4g-3kR" customClass="QZNavigtaionController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="39J-kE-Ez0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +28,7 @@
         <!--Mine View Controller-->
         <scene sceneID="IlC-bh-MKa">
             <objects>
-                <viewController storyboardIdentifier="mineNav" id="gW3-by-eJh" customClass="QZMineViewController" sceneMemberID="viewController">
+                <viewController id="gW3-by-eJh" customClass="QZMineViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ii2-F5-eEy"/>
                         <viewControllerLayoutGuide type="bottom" id="ca3-K7-lYH"/>

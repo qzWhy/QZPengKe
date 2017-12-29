@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "QZLeftSlideViewController.h"
+#import "QZNavigtaionController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+//-----侧滑------
+@property (nonatomic, strong) QZLeftSlideViewController *leftSlideVC;
+
+@property (nonatomic, strong) QZNavigtaionController*mainNavigationController;
 
 @property (strong, nonatomic) UIWindow *window;
 

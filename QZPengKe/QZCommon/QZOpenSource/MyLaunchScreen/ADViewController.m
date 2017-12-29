@@ -12,7 +12,7 @@
 //#import "HLLoginOperation.h"
 static const CGFloat skipButtonRadius = 20;
 
-static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yapi";
+//static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yapi";
 
 @interface ADViewController ()
 @property (nonatomic, strong) UIImageView *backgroundImageView;

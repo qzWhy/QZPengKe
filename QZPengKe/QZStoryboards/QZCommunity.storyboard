@@ -12,7 +12,7 @@
         <!--Navigtaion Controller-->
         <scene sceneID="D6e-oH-PAG">
             <objects>
-                <navigationController id="NcZ-ht-QUE" customClass="QZNavigtaionController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="communityNav" id="NcZ-ht-QUE" customClass="QZNavigtaionController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="24L-b9-F1V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -28,7 +28,7 @@
         <!--Community HomePage-->
         <scene sceneID="5Kx-ob-kLT">
             <objects>
-                <viewController storyboardIdentifier="communityNav" id="URk-K9-u24" userLabel="Community HomePage" customClass="QZCommunityViewController" sceneMemberID="viewController">
+                <viewController id="URk-K9-u24" userLabel="Community HomePage" customClass="QZCommunityViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="asH-Dt-Dw9"/>
                         <viewControllerLayoutGuide type="bottom" id="kY5-nA-Qd1"/>

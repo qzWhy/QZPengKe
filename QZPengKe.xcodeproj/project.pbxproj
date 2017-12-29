@@ -17,7 +17,6 @@
 		268FE9391FECEC7200DD019D /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE9381FECEC7200DD019D /* QZBaseTableViewController.m */; };
 		268FE93C1FECF2E300DD019D /* QZHomePgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE93B1FECF2E300DD019D /* QZHomePgViewController.m */; };
 		268FE93F1FECF32900DD019D /* QZMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE93E1FECF32900DD019D /* QZMineViewController.m */; };
-		268FE9421FECF34200DD019D /* QZShopHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE9411FECF34200DD019D /* QZShopHomeViewController.m */; };
 		268FE9451FECF37100DD019D /* QZTutorialHomePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE9441FECF37100DD019D /* QZTutorialHomePageController.m */; };
 		268FE9481FECF38E00DD019D /* QZCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE9471FECF38E00DD019D /* QZCommunityViewController.m */; };
 		268FE94B1FECF54900DD019D /* QZHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE94A1FECF54900DD019D /* QZHomePage.storyboard */; };
@@ -26,6 +25,10 @@
 		268FE9511FECFB3E00DD019D /* QZShop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE9501FECFB3E00DD019D /* QZShop.storyboard */; };
 		268FE9531FECFB4C00DD019D /* QZLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE9521FECFB4C00DD019D /* QZLogin.storyboard */; };
 		268FE9551FED07A500DD019D /* QZMine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE9541FED07A500DD019D /* QZMine.storyboard */; };
+		26A3FF7D1FF4962900FD0366 /* QZLestSideslipController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A3FF7C1FF4962900FD0366 /* QZLestSideslipController.m */; };
+		26A3FF881FF4CDCD00FD0366 /* QZShopHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A3FF841FF4CDCD00FD0366 /* QZShopHomeViewController.m */; };
+		26A3FF8D1FF4CE5400FD0366 /* QZLestSideslipFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A3FF8C1FF4CE5400FD0366 /* QZLestSideslipFirstCell.m */; };
+		26A3FF901FF4CEA900FD0366 /* QZLestSideslipSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26A3FF8F1FF4CEA900FD0366 /* QZLestSideslipSecondCell.m */; };
 		26AFE1271FF370BC00E3C9FF /* QZLeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AFE1261FF370BC00E3C9FF /* QZLeftSlideViewController.m */; };
 		26AFE12A1FF387EA00E3C9FF /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AFE1291FF387EA00E3C9FF /* UIView_extra.m */; };
 		26AFE12E1FF39FA500E3C9FF /* QZTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AFE12D1FF39FA500E3C9FF /* QZTableView.m */; };
@@ -59,8 +62,6 @@
 		268FE93B1FECF2E300DD019D /* QZHomePgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZHomePgViewController.m; sourceTree = "<group>"; };
 		268FE93D1FECF32900DD019D /* QZMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZMineViewController.h; sourceTree = "<group>"; };
 		268FE93E1FECF32900DD019D /* QZMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZMineViewController.m; sourceTree = "<group>"; };
-		268FE9401FECF34200DD019D /* QZShopHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZShopHomeViewController.h; sourceTree = "<group>"; };
-		268FE9411FECF34200DD019D /* QZShopHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZShopHomeViewController.m; sourceTree = "<group>"; };
 		268FE9431FECF37100DD019D /* QZTutorialHomePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZTutorialHomePageController.h; sourceTree = "<group>"; };
 		268FE9441FECF37100DD019D /* QZTutorialHomePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZTutorialHomePageController.m; sourceTree = "<group>"; };
 		268FE9461FECF38E00DD019D /* QZCommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZCommunityViewController.h; sourceTree = "<group>"; };
@@ -71,6 +72,14 @@
 		268FE9501FECFB3E00DD019D /* QZShop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QZShop.storyboard; sourceTree = "<group>"; };
 		268FE9521FECFB4C00DD019D /* QZLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QZLogin.storyboard; sourceTree = "<group>"; };
 		268FE9541FED07A500DD019D /* QZMine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QZMine.storyboard; sourceTree = "<group>"; };
+		26A3FF7B1FF4962900FD0366 /* QZLestSideslipController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZLestSideslipController.h; sourceTree = "<group>"; };
+		26A3FF7C1FF4962900FD0366 /* QZLestSideslipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZLestSideslipController.m; sourceTree = "<group>"; };
+		26A3FF831FF4CDCD00FD0366 /* QZShopHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZShopHomeViewController.h; sourceTree = "<group>"; };
+		26A3FF841FF4CDCD00FD0366 /* QZShopHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZShopHomeViewController.m; sourceTree = "<group>"; };
+		26A3FF8B1FF4CE5400FD0366 /* QZLestSideslipFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZLestSideslipFirstCell.h; sourceTree = "<group>"; };
+		26A3FF8C1FF4CE5400FD0366 /* QZLestSideslipFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZLestSideslipFirstCell.m; sourceTree = "<group>"; };
+		26A3FF8E1FF4CEA900FD0366 /* QZLestSideslipSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZLestSideslipSecondCell.h; sourceTree = "<group>"; };
+		26A3FF8F1FF4CEA900FD0366 /* QZLestSideslipSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZLestSideslipSecondCell.m; sourceTree = "<group>"; };
 		26AFE1251FF370BC00E3C9FF /* QZLeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZLeftSlideViewController.h; sourceTree = "<group>"; };
 		26AFE1261FF370BC00E3C9FF /* QZLeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZLeftSlideViewController.m; sourceTree = "<group>"; };
 		26AFE1281FF387EA00E3C9FF /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
@@ -267,11 +276,11 @@
 		268FE9301FECEB6E00DD019D /* QZMainProModule */ = {
 			isa = PBXGroup;
 			children = (
-				268FE9311FECEBD000DD019D /* QZCommunity */,
 				268FE9321FECEBD000DD019D /* QZHomePage */,
-				268FE9331FECEBD000DD019D /* QZMine */,
-				268FE9341FECEBD000DD019D /* QZShop */,
+				268FE9311FECEBD000DD019D /* QZCommunity */,
 				268FE9351FECEBD000DD019D /* QZTutorial */,
+				268FE9341FECEBD000DD019D /* QZShop */,
+				268FE9331FECEBD000DD019D /* QZMine */,
 			);
 			path = QZMainProModule;
 			sourceTree = "<group>";
@@ -307,8 +316,8 @@
 			isa = PBXGroup;
 			children = (
 				26AFE1241FF3707D00E3C9FF /* QZSideslip */,
-				268FE9401FECF34200DD019D /* QZShopHomeViewController.h */,
-				268FE9411FECF34200DD019D /* QZShopHomeViewController.m */,
+				26A3FF7A1FF495EC00FD0366 /* QZLestSideslipController */,
+				26A3FF7E1FF4CD8800FD0366 /* QZShopHomePage */,
 			);
 			path = QZShop;
 			sourceTree = "<group>";
@@ -344,6 +353,76 @@
 				268FE9521FECFB4C00DD019D /* QZLogin.storyboard */,
 			);
 			path = QZStoryboards;
+			sourceTree = "<group>";
+		};
+		26A3FF7A1FF495EC00FD0366 /* QZLestSideslipController */ = {
+			isa = PBXGroup;
+			children = (
+				26A3FF7B1FF4962900FD0366 /* QZLestSideslipController.h */,
+				26A3FF7C1FF4962900FD0366 /* QZLestSideslipController.m */,
+			);
+			path = QZLestSideslipController;
+			sourceTree = "<group>";
+		};
+		26A3FF7E1FF4CD8800FD0366 /* QZShopHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				26A3FF821FF4CDCD00FD0366 /* Controllers */,
+				26A3FF851FF4CDCD00FD0366 /* Models */,
+				26A3FF861FF4CDCD00FD0366 /* other */,
+				26A3FF871FF4CDCD00FD0366 /* Views */,
+			);
+			path = QZShopHomePage;
+			sourceTree = "<group>";
+		};
+		26A3FF821FF4CDCD00FD0366 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				26A3FF831FF4CDCD00FD0366 /* QZShopHomeViewController.h */,
+				26A3FF841FF4CDCD00FD0366 /* QZShopHomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		26A3FF851FF4CDCD00FD0366 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		26A3FF861FF4CDCD00FD0366 /* other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+		26A3FF871FF4CDCD00FD0366 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				26A3FF891FF4CDE800FD0366 /* cells */,
+				26A3FF8A1FF4CDE800FD0366 /* View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		26A3FF891FF4CDE800FD0366 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				26A3FF8B1FF4CE5400FD0366 /* QZLestSideslipFirstCell.h */,
+				26A3FF8C1FF4CE5400FD0366 /* QZLestSideslipFirstCell.m */,
+				26A3FF8E1FF4CEA900FD0366 /* QZLestSideslipSecondCell.h */,
+				26A3FF8F1FF4CEA900FD0366 /* QZLestSideslipSecondCell.m */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		26A3FF8A1FF4CDE800FD0366 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		26AFE1241FF3707D00E3C9FF /* QZSideslip */ = {
@@ -558,15 +637,17 @@
 			files = (
 				268FE92F1FECE90200DD019D /* UIColor+Expanded.m in Sources */,
 				268FE93F1FECF32900DD019D /* QZMineViewController.m in Sources */,
+				26A3FF901FF4CEA900FD0366 /* QZLestSideslipSecondCell.m in Sources */,
+				26A3FF881FF4CDCD00FD0366 /* QZShopHomeViewController.m in Sources */,
 				26AFE12E1FF39FA500E3C9FF /* QZTableView.m in Sources */,
 				26E37D611FF09E5A007FEE0D /* QZTabBarController.m in Sources */,
-				268FE9421FECF34200DD019D /* QZShopHomeViewController.m in Sources */,
 				268FE8C71FECD3D400DD019D /* ViewController.m in Sources */,
 				26D2508D1FF1F77F009A0FF4 /* ADViewController.m in Sources */,
 				268FE9391FECEC7200DD019D /* QZBaseTableViewController.m in Sources */,
 				26D2508F1FF1F77F009A0FF4 /* LaunchDemo.m in Sources */,
 				26AFE1271FF370BC00E3C9FF /* QZLeftSlideViewController.m in Sources */,
 				26AFE12A1FF387EA00E3C9FF /* UIView_extra.m in Sources */,
+				26A3FF7D1FF4962900FD0366 /* QZLestSideslipController.m in Sources */,
 				268FE9481FECF38E00DD019D /* QZCommunityViewController.m in Sources */,
 				26E37D5D1FF09E52007FEE0D /* QZNavigtaionController.m in Sources */,
 				268FE8B01FECB82E00DD019D /* AppDelegate.m in Sources */,
@@ -575,6 +656,7 @@
 				268FE93C1FECF2E300DD019D /* QZHomePgViewController.m in Sources */,
 				268FE8AD1FECB82E00DD019D /* main.m in Sources */,
 				26D2508E1FF1F77F009A0FF4 /* ADWebVC.m in Sources */,
+				26A3FF8D1FF4CE5400FD0366 /* QZLestSideslipFirstCell.m in Sources */,
 				268FE9451FECF37100DD019D /* QZTutorialHomePageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

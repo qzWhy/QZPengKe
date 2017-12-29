@@ -8,14 +8,24 @@
 
 #ifndef QZToaster_pch
 #define QZToaster_pch
-
+#import "UIColor+Expanded.h"
 #import "UIView_extra.h"
+#import "QZTableView.h"
+#import "UIImageView+WebCache.h"
+
+static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yapi";
 
 #define QZWhiteColor [UIColor whiteColor]
 #define QZFontSIYUAN_NORMAL(CGFloat) [UIFont fontWithName:@"SourceHanSansCN-Normal" size:CGFloat]
 
 //16进制颜色
 #define QZHEXCOLOR(str) [UIColor colorWithHexString:str]
+
+/**
+ *  加载网络图片
+ */
+#define QZPlaceholderImage [UIImage imageNamed:@"Default"]
+#define QZkSDWebImage(imageView,imageStr) [imageView sd_setImageWithURL:[NSURL URLWithString:imageStr] placeholderImage:QZPlaceholderImage]
 
 #define QZKBACKGROUND_COLOR QZHEXCOLOR(@"f1eeee")
 #define QZ_TABBAR_TINTCOLOR QZHEXCOLOR(@"FFCB49")
@@ -30,5 +40,7 @@
 #define DEVICE_MODEL            [UIDevice currentDevice].model
 #define DEVICE_MAC_ADDRESS      [[UIDevice currentDevice] macAddress]
 #define DEVICE_SYSTEM_VERSION   [[UIDevice currentDevice] systemVersion]
+
+#define DEVICE_VERSION  ([[UIDevice currentDevice].systemVersion doubleValue])
 
 #endif /* QZToaster_pch */

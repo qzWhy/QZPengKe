@@ -10,11 +10,22 @@
 
 @implementation QZTableView
 
+- (void)setExtraCellLineHidden
+{
+    UIView *view = [UIView new];
+    view.backgroundColor = [UIColor clearColor];
+    [self setTableFooterView:view];
+}
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    self.backgroundColor = QZKBACKGROUND_COLOR;
+    self.backgroundColor = QZ_TABBAR_TINTCOLOR;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
+    if (DEVICE_VERSION >= 8.0) {
+        self.layoutMargins = UIEdgeInsetsZero;
+    }
+    [self setExtraCellLineHidden];
     
 }
 

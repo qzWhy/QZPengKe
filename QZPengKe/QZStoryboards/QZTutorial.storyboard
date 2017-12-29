@@ -12,8 +12,7 @@
         <!--Navigtaion Controller-->
         <scene sceneID="gKU-Fz-WrE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fxK-dG-70X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="g0s-ea-j9n" customClass="QZNavigtaionController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="turorialNav" id="g0s-ea-j9n" customClass="QZNavigtaionController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bmt-pt-xfO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,13 +21,14 @@
                         <segue destination="zea-Sy-syq" kind="relationship" relationship="rootViewController" id="Oh5-XO-N87"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fxK-dG-70X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-297" y="132"/>
         </scene>
         <!--Tutorial Home Page Controller-->
         <scene sceneID="yRB-Ro-TrJ">
             <objects>
-                <viewController storyboardIdentifier="turorialNav" id="zea-Sy-syq" customClass="QZTutorialHomePageController" sceneMemberID="viewController">
+                <viewController id="zea-Sy-syq" customClass="QZTutorialHomePageController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Txx-82-kYZ"/>
                         <viewControllerLayoutGuide type="bottom" id="2RT-TX-yK5"/>

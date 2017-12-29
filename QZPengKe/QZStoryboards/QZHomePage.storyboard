@@ -12,7 +12,7 @@
         <!--Navigtaion Controller-->
         <scene sceneID="Nwr-X1-FEH">
             <objects>
-                <navigationController id="AWN-Ra-7Pt" customClass="QZNavigtaionController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homePageNav" id="AWN-Ra-7Pt" customClass="QZNavigtaionController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="QLg-da-LvY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,12 +23,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWg-fw-gZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762" y="-277"/>
+            <point key="canvasLocation" x="-929" y="-292"/>
         </scene>
         <!--Home Pg View Controller-->
         <scene sceneID="zGS-t9-2qS">
             <objects>
-                <tableViewController storyboardIdentifier="homePageNav" id="wGb-K8-cU1" customClass="QZHomePgViewController" sceneMemberID="viewController">
+                <tableViewController id="wGb-K8-cU1" customClass="QZHomePgViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fTZ-WS-GCB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fl4-6D-IId" id="pkL-qT-Qaa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

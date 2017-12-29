@@ -31,7 +31,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+/**
+ *  @brief 初始化侧滑控制器
+ *  @param leftVC 左侧图控制器
+ *  mainVC 中间视图控制器
+ *  @result instancetype 初始化生成的对象
+ */
 - (instancetype)initWithLeftView:(UIViewController *)leftVC andMainView:(UIViewController *)mainVC
 {
     if (self = [super init]) {
@@ -73,6 +78,10 @@
 //        
 //        [self.view addSubview:self.mainVC.view];
 //        self.closed = YES;//初始时侧窗关闭
+        
+        [self.view addSubview:self.mainVC.view];
+        self.closed = YES;//初始时侧滑窗关闭
+        
     }
     return self;
 }

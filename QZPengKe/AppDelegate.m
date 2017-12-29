@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "HYBNetworking.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    // 通常放在appdelegate就可以了
+    [HYBNetworking updateBaseUrl:@"http://app.depelec.com.cn/index.php/Yapi"];
+    [HYBNetworking enableInterfaceDebug:YES];
+    
+    // 配置请求和响应类型，由于部分伙伴们的服务器不接收JSON传过去，现在默认值改成了plainText
+//    [HYBNetworking configRequestType:kHYBRequestTypePlainText
+//                        responseType:kHYBResponseTypeJSON
+//                 shouldAutoEncodeUrl:YES
+//             callbackOnCancelRequest:NO];
+    // 设置GET、POST请求都缓存
+    [HYBNetworking cacheGetRequest:YES shoulCachePost:YES];
     return YES;
 }
 
