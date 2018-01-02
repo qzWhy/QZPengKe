@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		265AA44F1FFB6CFE001E7C2D /* QZSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265AA44E1FFB6CFE001E7C2D /* QZSearchBarViewController.m */; };
 		268FE8AD1FECB82E00DD019D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AC1FECB82E00DD019D /* main.m */; };
 		268FE8B01FECB82E00DD019D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AF1FECB82E00DD019D /* AppDelegate.m */; };
 		268FE8B61FECB82E00DD019D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE8B41FECB82E00DD019D /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265AA44D1FFB6CFE001E7C2D /* QZSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZSearchBarViewController.h; sourceTree = "<group>"; };
+		265AA44E1FFB6CFE001E7C2D /* QZSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZSearchBarViewController.m; sourceTree = "<group>"; };
 		268FE8A81FECB82E00DD019D /* QZPengKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QZPengKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268FE8AC1FECB82E00DD019D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		268FE8AE1FECB82E00DD019D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,15 @@
 				B9985A2A5DBD0D003A210791 /* libPods-QZPengKe.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		265AA44C1FFB6CBF001E7C2D /* QZSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				265AA44D1FFB6CFE001E7C2D /* QZSearchBarViewController.h */,
+				265AA44E1FFB6CFE001E7C2D /* QZSearchBarViewController.m */,
+			);
+			path = QZSearchBar;
 			sourceTree = "<group>";
 		};
 		268FE89F1FECB82E00DD019D = {
@@ -481,6 +493,7 @@
 		26E37D621FF09EE0007FEE0D /* QZCommon */ = {
 			isa = PBXGroup;
 			children = (
+				265AA44C1FFB6CBF001E7C2D /* QZSearchBar */,
 				26E37D631FF09EE0007FEE0D /* QZOpenSource */,
 			);
 			path = QZCommon;
@@ -646,6 +659,7 @@
 				268FE9391FECEC7200DD019D /* QZBaseTableViewController.m in Sources */,
 				26D2508F1FF1F77F009A0FF4 /* LaunchDemo.m in Sources */,
 				26AFE1271FF370BC00E3C9FF /* QZLeftSlideViewController.m in Sources */,
+				265AA44F1FFB6CFE001E7C2D /* QZSearchBarViewController.m in Sources */,
 				26AFE12A1FF387EA00E3C9FF /* UIView_extra.m in Sources */,
 				26A3FF7D1FF4962900FD0366 /* QZLestSideslipController.m in Sources */,
 				268FE9481FECF38E00DD019D /* QZCommunityViewController.m in Sources */,

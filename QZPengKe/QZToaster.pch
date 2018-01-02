@@ -14,12 +14,25 @@
 #import "UIImageView+WebCache.h"
 
 static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yapi";
-
+#define QZBlackColor [UIColor blackColor]
 #define QZWhiteColor [UIColor whiteColor]
+#define QZGrayColor [UIColor grayColor]
+#define QZLightGrayColor [UIColor lightGrayColor]
 #define QZFontSIYUAN_NORMAL(CGFloat) [UIFont fontWithName:@"SourceHanSansCN-Normal" size:CGFloat]
 
 //16进制颜色
 #define QZHEXCOLOR(str) [UIColor colorWithHexString:str]
+
+/**
+ *  版本
+ */
+#define QZIOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+/**
+ *  UTF8
+ */
+
+#define QZUTF8_STRING(str)   [[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"]
 
 /**
  *  加载网络图片

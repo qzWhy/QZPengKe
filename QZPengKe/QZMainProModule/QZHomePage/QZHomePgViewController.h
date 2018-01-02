@@ -6,11 +6,12 @@
 //  Copyright © 2017年 XiaoZuoXiaoYou. All rights reserved.
 //
 
-#import "QZBaseTableViewController.h"
+#import "QZBaseViewController.h"
 
-@interface QZHomePgViewController : QZBaseTableViewController
+@interface QZHomePgViewController : QZBaseViewController
 
 @property (nonatomic, copy) NSString *type;
+@property (nonatomic, assign) int homePage;
 
 
 @end
