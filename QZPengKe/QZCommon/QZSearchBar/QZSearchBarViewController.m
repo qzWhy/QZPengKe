@@ -33,7 +33,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     [self setupNav];
     
 }
@@ -46,14 +45,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self initDataKeyword:@""];
     self.view.backgroundColor = QZKBACKGROUND_COLOR;
     self.navigationItem.hidesBackButton = YES;
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self creatSearchBar];
-    [self initDataKeyword:@""];
-    [self creatJCTagListView];
+    
+    
 }
 
 #pragma mark - 创建tagView
@@ -64,7 +65,7 @@
     self.tagListView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
     [self.view addSubview:self.tagListView];
     
-    self.tagListView.canSelectTags = NO;
+    self.tagListView.canSelectTags = YES;
     self.tagListView.tagStrokeColor = QZHEXCOLOR(@"cccccc");
     self.tagListView.tagTextColor = QZHEXCOLOR(@"999999");
     
@@ -80,24 +81,21 @@
     [HYBNetworking postWithUrl:url refreshCache:NO params:param success:^(id response) {
         if ([keyword isEqualToString:@""]) {
             weakSelf.dataSource = response[@"data"][@"keyword"];
-            [weakSelf.tagListView.tags addObjectsFromArray:@[@"jidan",@"ee"]];
-            NSLog(@"---->%@",response[@"data"][@"keyword"]);
+            [weakSelf.tagListView.tags addObjectsFromArray:response[@"data"][@"keyword"]];
+            NSLog(@"---->%@,,,,%@",self.tagListView.tags,response[@"data"][@"keyword"]);
             [weakSelf.tagListView setCompletionBlockWithSelected:^(NSInteger index) {
                 NSLog(@"_______%ld____",(long)index);
-                
+//                
                 [self.searchBar resignFirstResponder];
                 
                 [weakSelf initDataKeyword:QZUTF8_STRING(weakSelf.dataSource[index])];
+//                NSLog(@"--%@",QZUTF8_STRING(weakSelf.dataSource[index]));
                 
-                
-//                NSString *str;
-//                [[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]] stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
-                
-//                [[NSString stringWithString:[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"]
                 self.cnameStr = weakSelf.dataSource[index];
                 
             } ];
             dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"=====>%@",self.tagListView.tags);
                 [weakSelf.tagListView.collectionView reloadData];
             });
         } else {
@@ -107,6 +105,12 @@
                 [response[@"data"][@"info"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                     NSLog(@"dd");
                 }];
+                
+                for (UIViewController *controller in weakSelf.navigationController.viewControllers) {
+                    if ([controller isKindOfClass:[]]) {
+                        <#statements#>
+                    }
+                }
             });
         }
     } fail:^(NSError *error) {
@@ -146,6 +150,42 @@
     } else {
         [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:title];
     }
+}
+#pragma mark -- 搜索的代理方法
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self.navigationController popViewControllerAnimated:NO];
+}
+#pragma mark - 点击搜索代理方法
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    
+}
+
+- (NSArray *)dataSource
+{
+    if (!_dataSource) {
+        _dataSource = @[].copy;
+    }
+    return _dataSource;
+}
+
+- (JCTagListView *)tagListView
+{
+    if (!_tagListView) {
+        self.tagListView = [JCTagListView new];
+        self.tagListView.backgroundColor = QZHEXCOLOR(@"f5f5f5");
+        self.tagListView.frame = CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+        [self.view addSubview:self.tagListView];
+        
+        self.tagListView.canSelectTags = YES;
+        self.tagListView.tagStrokeColor = QZHEXCOLOR(@"cccccc");
+        self.tagListView.tagTextColor = QZHEXCOLOR(@"999999");
+        
+        self.tagListView.tagCornerRadius = 2.0f;
+    }
+    return _tagListView;
 }
 
 @end
