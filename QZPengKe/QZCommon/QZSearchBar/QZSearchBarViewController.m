@@ -7,8 +7,11 @@
 //
 
 #import "QZSearchBarViewController.h"
+#import "QZShopHomePageCollectionViewModel.h"
+#import "QZHomeSearchResultViewController.h"
 #import "HYBNetworking.h"
 #import "JCTagListView.h"
+#import "MJExtension.h"
 @interface QZSearchBarViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) JCTagListView *tagListView;
@@ -103,14 +106,40 @@
                 NSMutableArray *array = @[].mutableCopy;
                 
                 [response[@"data"][@"info"] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    NSLog(@"dd");
+                    QZShopHomePageCollectionViewModel *model = [QZShopHomePageCollectionViewModel mj_objectWithKeyValues:obj];
+                    [array addObject:model];
                 }];
                 
                 for (UIViewController *controller in weakSelf.navigationController.viewControllers) {
-                    if ([controller isKindOfClass:[]]) {
-                        <#statements#>
+                    if ([controller isKindOfClass:[QZSearchBarViewController class]]) {
+                        //传搜索结果值
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"QZSearchResultArray" object:array];
+                        [weakSelf.navigationController popToViewController:controller animated:NO];
+                        return ;
                     }
                 }
+                
+                if ([self.judgeVC isEqualToString:@"首页"]||
+                    [self.judgeVC isEqualToString:@"教程"]) {
+                    if ([self.judgeVC isEqualToString:@"教程"]) {
+                        QZHomeSearchResultViewController *searchVC = [[QZHomeSearchResultViewController alloc] init];
+                        searchVC.judgeVC = self.judgeVC;
+                        searchVC.module = self.module;
+                        searchVC.cid = self.cid;
+                        searchVC.type = self.type;
+                        searchVC.name = self.cnameStr;
+                        [self.navigationController pushViewController:searchVC animated:YES];
+                        return;
+                    } else {
+                        QZHomeSearchResultViewController *searchVC = [[QZHomeSearchResultViewController alloc] init];
+                        searchVC.judgeVC= self.judgeVC;
+                        searchVC.name = self.cnameStr;
+                        [self.navigationController pushViewController:searchVC animated:YES];
+                        return;
+                    }
+                }
+                
+                
             });
         }
     } fail:^(NSError *error) {

@@ -1,26 +1,23 @@
 //
-//  QZMineViewController.m
+//  QZPersonalInformationController.m
 //  QZPengKe
 //
-//  Created by 000 on 17/12/22.
-//  Copyright © 2017年 XiaoZuoXiaoYou. All rights reserved.
+//  Created by 000 on 18/1/9.
+//  Copyright © 2018年 XiaoZuoXiaoYou. All rights reserved.
 //
 
-#import "QZMineViewController.h"
-#import "QZAvatarButton.h"
+#import "QZPersonalInformationController.h"
 
-@interface QZMineViewController ()
-@property (weak, nonatomic) IBOutlet QZAvatarButton *avatarButton;
+@interface QZPersonalInformationController ()
 
 @end
 
-@implementation QZMineViewController
+@implementation QZPersonalInformationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-- (IBAction)avatarButtonAction:(id)sender {
+    
+    
     
 }
 

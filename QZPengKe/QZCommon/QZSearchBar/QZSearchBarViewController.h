@@ -6,6 +6,10 @@
 //  Copyright © 2018年 XiaoZuoXiaoYou. All rights reserved.
 //
 
+/**
+ *  搜索界面 
+ */
+
 #import <UIKit/UIKit.h>
 
 @interface QZSearchBarViewController : UIViewController

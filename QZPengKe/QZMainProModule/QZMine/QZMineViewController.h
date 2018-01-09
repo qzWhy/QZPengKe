@@ -6,8 +6,8 @@
 //  Copyright © 2017年 XiaoZuoXiaoYou. All rights reserved.
 //
 
-#import "QZBaseTableViewController.h"
+#import "QZBaseViewController.h"
 
-@interface QZMineViewController : QZBaseTableViewController
+@interface QZMineViewController : QZBaseViewController
 
 @end

@@ -24,7 +24,48 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWK-UD-3Ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-854" y="90"/>
+            <point key="canvasLocation" x="-839" y="-209"/>
+        </scene>
+        <!--Search Result Controller-->
+        <scene sceneID="Vtw-jJ-AXf">
+            <objects>
+                <viewController id="yVA-eD-BCQ" customClass="QZSearchResultController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tHJ-Dk-buI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jc4-Jm-18Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LdZ-RH-La8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mbt-yo-yT3">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UBG-ew-gmo">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mbt-yo-yT3" secondAttribute="trailing" id="9SB-AE-A7n"/>
+                            <constraint firstItem="mbt-yo-yT3" firstAttribute="top" secondItem="tHJ-Dk-buI" secondAttribute="bottom" constant="40" id="DVA-ee-pvc"/>
+                            <constraint firstItem="mbt-yo-yT3" firstAttribute="leading" secondItem="LdZ-RH-La8" secondAttribute="leading" id="jjt-8j-VxN"/>
+                            <constraint firstItem="Jc4-Jm-18Z" firstAttribute="top" secondItem="mbt-yo-yT3" secondAttribute="bottom" id="xVW-G8-6cK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="mbt-yo-yT3" id="ScI-AK-vHv"/>
+                        <outlet property="collectionViewFlowLayout" destination="UBG-ew-gmo" id="DGR-eF-z9R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOg-ZM-gYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="519"/>
         </scene>
         <!--Shop Home View Controller-->
         <scene sceneID="3pl-My-3lM">
@@ -58,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFc-Zf-Vzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="99"/>
+            <point key="canvasLocation" x="-421" y="-210"/>
         </scene>
         <!--Lest Sideslip Controller-->
         <scene sceneID="wMt-9U-paH">
@@ -199,24 +240,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="36T-wk-Wby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="825.5" y="117.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="PjE-lr-scw">
-            <objects>
-                <viewController id="SnF-Af-kFY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gzJ-55-G8D"/>
-                        <viewControllerLayoutGuide type="bottom" id="CyU-cE-Kop"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cab-2R-ljW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZeR-zg-cBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="490" y="541"/>
         </scene>
     </scenes>
 </document>

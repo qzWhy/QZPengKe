@@ -23,9 +23,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSJ-TA-KHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="227"/>
+            <point key="canvasLocation" x="-359" y="237"/>
         </scene>
-        <!--Mine View Controller-->
+        <!--我-->
         <scene sceneID="IlC-bh-MKa">
             <objects>
                 <viewController id="gW3-by-eJh" customClass="QZMineViewController" sceneMemberID="viewController">
@@ -36,9 +36,34 @@
                     <view key="view" contentMode="scaleToFill" id="B4f-4t-3Rb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfW-KD-Npu" customClass="QZAvatarButton">
+                                <rect key="frame" x="10" y="74" width="76" height="76"/>
+                                <color key="backgroundColor" red="0.66045080329999994" green="0.66666666669999997" blue="0.64953778929999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="7l4-SM-IMv"/>
+                                    <constraint firstAttribute="width" constant="76" id="isz-ja-4lZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="avatarButtonAction:" destination="gW3-by-eJh" eventType="touchUpInside" id="8W7-cC-h2b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhH-U8-8GL">
+                                <rect key="frame" x="91" y="133" width="29" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HhH-U8-8GL" firstAttribute="leading" secondItem="sfW-KD-Npu" secondAttribute="trailing" constant="5" id="E9c-vE-Yme"/>
+                            <constraint firstItem="sfW-KD-Npu" firstAttribute="leading" secondItem="B4f-4t-3Rb" secondAttribute="leading" constant="10" id="gNk-U5-zzT"/>
+                            <constraint firstItem="HhH-U8-8GL" firstAttribute="bottom" secondItem="sfW-KD-Npu" secondAttribute="bottom" id="hnd-2v-aUG"/>
+                            <constraint firstItem="sfW-KD-Npu" firstAttribute="top" secondItem="Ii2-F5-eEy" secondAttribute="bottom" constant="10" id="qKb-zk-7t5"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="N9J-et-YvL">
+                    <navigationItem key="navigationItem" title="我" id="N9J-et-YvL">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="wcj-Ff-js4">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2oQ-RQ-svM">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
@@ -54,10 +79,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="avatarButton" destination="sfW-KD-Npu" id="mxV-Un-yF2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oD-7n-Ytz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="530" y="213"/>
+            <point key="canvasLocation" x="246" y="236"/>
         </scene>
     </scenes>
 </document>
