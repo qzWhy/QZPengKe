@@ -11,11 +11,18 @@
 		2601DFA31FFDFB9E00EE2638 /* QZSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2601DFA21FFDFB9E00EE2638 /* QZSearchResultController.m */; };
 		2611479520048A4800E64CD7 /* QZAvatarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2611479420048A4800E64CD7 /* QZAvatarButton.m */; };
 		261147992004A2AC00E64CD7 /* QZPersonalInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 261147982004A2AC00E64CD7 /* QZPersonalInformationController.m */; };
+		2611479D2004B23A00E64CD7 /* QZLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2611479C2004B23A00E64CD7 /* QZLoginController.m */; };
 		26227BF41FFC8A9000731A3E /* QZHomePgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26227BF11FFC8A9000731A3E /* QZHomePgViewController.m */; };
 		26227BF81FFC9F0500731A3E /* QZHomeSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26227BF61FFC9F0500731A3E /* QZHomeSearchResultViewController.m */; };
 		26227BF91FFC9F0500731A3E /* QZHomeSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26227BF71FFC9F0500731A3E /* QZHomeSearchResultViewController.xib */; };
 		26227C001FFCAA2C00731A3E /* QZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26227BFE1FFCAA2C00731A3E /* QZCollectionViewCell.m */; };
 		26227C011FFCAA2C00731A3E /* QZCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26227BFF1FFCAA2C00731A3E /* QZCollectionViewCell.xib */; };
+		2646C5C72006045800AFB4E1 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5C62006045700AFB4E1 /* libicucore.tbd */; };
+		2646C5C92006046300AFB4E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5C82006046300AFB4E1 /* libz.tbd */; };
+		2646C5CB2006047200AFB4E1 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5CA2006047200AFB4E1 /* libstdc++.tbd */; };
+		2646C5CD2006047F00AFB4E1 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5CC2006047F00AFB4E1 /* JavaScriptCore.framework */; };
+		2646C5CF2006049E00AFB4E1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5CE2006049E00AFB4E1 /* libsqlite3.tbd */; };
+		2646C5D1200604AE00AFB4E1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5D0200604AE00AFB4E1 /* ImageIO.framework */; };
 		265AA44F1FFB6CFE001E7C2D /* QZSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265AA44E1FFB6CFE001E7C2D /* QZSearchBarViewController.m */; };
 		268FE8AD1FECB82E00DD019D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AC1FECB82E00DD019D /* main.m */; };
 		268FE8B01FECB82E00DD019D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AF1FECB82E00DD019D /* AppDelegate.m */; };
@@ -60,6 +67,8 @@
 		2611479420048A4800E64CD7 /* QZAvatarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZAvatarButton.m; sourceTree = "<group>"; };
 		261147972004A2AC00E64CD7 /* QZPersonalInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZPersonalInformationController.h; sourceTree = "<group>"; };
 		261147982004A2AC00E64CD7 /* QZPersonalInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZPersonalInformationController.m; sourceTree = "<group>"; };
+		2611479B2004B23A00E64CD7 /* QZLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZLoginController.h; sourceTree = "<group>"; };
+		2611479C2004B23A00E64CD7 /* QZLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZLoginController.m; sourceTree = "<group>"; };
 		26227BF01FFC8A9000731A3E /* QZHomePgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZHomePgViewController.h; sourceTree = "<group>"; };
 		26227BF11FFC8A9000731A3E /* QZHomePgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZHomePgViewController.m; sourceTree = "<group>"; };
 		26227BF51FFC9F0500731A3E /* QZHomeSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZHomeSearchResultViewController.h; sourceTree = "<group>"; };
@@ -68,6 +77,12 @@
 		26227BFD1FFCAA2C00731A3E /* QZCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZCollectionViewCell.h; sourceTree = "<group>"; };
 		26227BFE1FFCAA2C00731A3E /* QZCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZCollectionViewCell.m; sourceTree = "<group>"; };
 		26227BFF1FFCAA2C00731A3E /* QZCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QZCollectionViewCell.xib; sourceTree = "<group>"; };
+		2646C5C62006045700AFB4E1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		2646C5C82006046300AFB4E1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2646C5CA2006047200AFB4E1 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		2646C5CC2006047F00AFB4E1 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		2646C5CE2006049E00AFB4E1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2646C5D0200604AE00AFB4E1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		265AA44D1FFB6CFE001E7C2D /* QZSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZSearchBarViewController.h; sourceTree = "<group>"; };
 		265AA44E1FFB6CFE001E7C2D /* QZSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZSearchBarViewController.m; sourceTree = "<group>"; };
 		268FE8A81FECB82E00DD019D /* QZPengKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QZPengKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +150,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2646C5D1200604AE00AFB4E1 /* ImageIO.framework in Frameworks */,
+				2646C5CF2006049E00AFB4E1 /* libsqlite3.tbd in Frameworks */,
+				2646C5CD2006047F00AFB4E1 /* JavaScriptCore.framework in Frameworks */,
+				2646C5CB2006047200AFB4E1 /* libstdc++.tbd in Frameworks */,
+				2646C5C92006046300AFB4E1 /* libz.tbd in Frameworks */,
+				2646C5C72006045800AFB4E1 /* libicucore.tbd in Frameworks */,
 				DB38E11E39D534564A2B2619 /* libPods-QZPengKe.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +166,12 @@
 		1BD675B4B79062185095AE4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2646C5D0200604AE00AFB4E1 /* ImageIO.framework */,
+				2646C5CE2006049E00AFB4E1 /* libsqlite3.tbd */,
+				2646C5CC2006047F00AFB4E1 /* JavaScriptCore.framework */,
+				2646C5CA2006047200AFB4E1 /* libstdc++.tbd */,
+				2646C5C82006046300AFB4E1 /* libz.tbd */,
+				2646C5C62006045700AFB4E1 /* libicucore.tbd */,
 				B9985A2A5DBD0D003A210791 /* libPods-QZPengKe.a */,
 			);
 			name = Frameworks;
@@ -191,6 +218,15 @@
 				261147982004A2AC00E64CD7 /* QZPersonalInformationController.m */,
 			);
 			path = QZPersonalInformationController;
+			sourceTree = "<group>";
+		};
+		2611479A2004B20A00E64CD7 /* QZLogIn */ = {
+			isa = PBXGroup;
+			children = (
+				2611479B2004B23A00E64CD7 /* QZLoginController.h */,
+				2611479C2004B23A00E64CD7 /* QZLoginController.m */,
+			);
+			path = QZLogIn;
 			sourceTree = "<group>";
 		};
 		26227BED1FFC8A9000731A3E /* Models */ = {
@@ -437,6 +473,7 @@
 		268FE9331FECEBD000DD019D /* QZMine */ = {
 			isa = PBXGroup;
 			children = (
+				2611479A2004B20A00E64CD7 /* QZLogIn */,
 				261147962004A23F00E64CD7 /* QZPersonalInformationController */,
 				268FE93D1FECF32900DD019D /* QZMineViewController.h */,
 				268FE93E1FECF32900DD019D /* QZMineViewController.m */,
@@ -792,6 +829,7 @@
 				26AFE12A1FF387EA00E3C9FF /* UIView_extra.m in Sources */,
 				26A3FF7D1FF4962900FD0366 /* QZLestSideslipController.m in Sources */,
 				26227C001FFCAA2C00731A3E /* QZCollectionViewCell.m in Sources */,
+				2611479D2004B23A00E64CD7 /* QZLoginController.m in Sources */,
 				268FE9481FECF38E00DD019D /* QZCommunityViewController.m in Sources */,
 				261147992004A2AC00E64CD7 /* QZPersonalInformationController.m in Sources */,
 				26E37D5D1FF09E52007FEE0D /* QZNavigtaionController.m in Sources */,

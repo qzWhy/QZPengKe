@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigtaion Controller-->
         <scene sceneID="8qs-9w-dXp">
             <objects>
-                <navigationController id="liK-Cg-OyT" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="QZNavgationControllerLogin" id="liK-Cg-OyT" customClass="QZNavigtaionController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLm-oN-Lco">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,12 +24,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ovz-e7-kJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-706" y="144"/>
+            <point key="canvasLocation" x="-895" y="128"/>
         </scene>
-        <!--View Controller-->
+        <!--登录-->
         <scene sceneID="J40-Hq-c5m">
             <objects>
-                <viewController id="h72-9k-JEe" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QZLoginController" id="h72-9k-JEe" customClass="QZLoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kB9-0w-xZe"/>
                         <viewControllerLayoutGuide type="bottom" id="6MU-ub-RYc"/>
@@ -36,14 +37,52 @@
                     <view key="view" contentMode="scaleToFill" id="lFb-4Z-J1N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-Da-xcV">
+                                <rect key="frame" x="94" y="547" width="187.5" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0w2-4E-1Xl">
+                                        <rect key="frame" x="129.5" y="35" width="44" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.72437625049999999" blue="0.3569578014" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="6xq-uc-RAC"/>
+                                            <constraint firstAttribute="width" constant="44" id="xn9-Hf-1MF"/>
+                                        </constraints>
+                                        <state key="normal" title="微信"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RO-sd-9Kz">
+                                        <rect key="frame" x="17" y="35" width="44" height="44"/>
+                                        <color key="backgroundColor" red="0.56877150880000005" green="0.86745915539999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="UtQ-Wm-Xfk"/>
+                                            <constraint firstAttribute="width" constant="44" id="vo5-Lv-b9d"/>
+                                        </constraints>
+                                        <state key="normal" title="微博"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="9RO-sd-9Kz" firstAttribute="leading" secondItem="EgU-Da-xcV" secondAttribute="leading" constant="17" id="N9G-Qf-aBJ"/>
+                                    <constraint firstItem="9RO-sd-9Kz" firstAttribute="top" secondItem="EgU-Da-xcV" secondAttribute="top" constant="35" id="PRv-4i-CiB"/>
+                                    <constraint firstItem="0w2-4E-1Xl" firstAttribute="top" secondItem="EgU-Da-xcV" secondAttribute="top" constant="35" id="bi2-1n-ddy"/>
+                                    <constraint firstAttribute="trailing" secondItem="0w2-4E-1Xl" secondAttribute="trailing" constant="14" id="bsb-fH-96L"/>
+                                    <constraint firstAttribute="height" constant="100" id="mVb-XS-HX4"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EgU-Da-xcV" firstAttribute="centerX" secondItem="lFb-4Z-J1N" secondAttribute="centerX" id="dg5-ez-gkk"/>
+                            <constraint firstItem="6MU-ub-RYc" firstAttribute="top" secondItem="EgU-Da-xcV" secondAttribute="bottom" constant="20" id="dt2-7N-mnp"/>
+                            <constraint firstItem="EgU-Da-xcV" firstAttribute="width" secondItem="lFb-4Z-J1N" secondAttribute="width" multiplier="0.5" id="ghf-hQ-FaZ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bgi-cR-mlk">
+                    <navigationItem key="navigationItem" title="登录" id="bgi-cR-mlk">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="haU-6h-KbY">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zeb-tf-OoL">
                                 <rect key="frame" x="16" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="取消"/>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="6wG-Oy-xpS">
@@ -54,10 +93,14 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sinaLoginBtn" destination="9RO-sd-9Kz" id="gex-B1-YdL"/>
+                        <outlet property="weChatBtn" destination="0w2-4E-1Xl" id="E5D-fp-6S6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GBO-tZ-oeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="143"/>
+            <point key="canvasLocation" x="-247.19999999999999" y="126.38680659670166"/>
         </scene>
     </scenes>
 </document>
