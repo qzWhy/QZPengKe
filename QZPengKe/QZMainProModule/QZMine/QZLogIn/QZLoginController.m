@@ -7,7 +7,7 @@
 //
 
 #import "QZLoginController.h"
-
+#import <ShareSDK/ShareSDK.h>
 @interface QZLoginController ()
 @property (weak, nonatomic) IBOutlet UIButton *sinaLoginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *weChatBtn;
@@ -19,6 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+}
+- (IBAction)WeiBoBtnClick:(id)sender {
+    
+}
+- (IBAction)WeChatBtnClick:(id)sender {
+    //例如微信登录
+    [ShareSDK getUserInfo:SSDKPlatformTypeWechat onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error) {
+        if (state == SSDKResponseStateSuccess) {
+            NSLog(@"uid=%@",user.uid);
+            NSLog(@"%@",user.credential);
+            NSLog(@"token=%@",user.credential.token);
+            NSLog(@"nickname=%@",user.nickname);
+        } else {
+            NSLog(@"%@",error);
+        }
+    }];
 }
 
 

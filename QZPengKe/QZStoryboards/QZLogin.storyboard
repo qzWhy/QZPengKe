@@ -49,6 +49,9 @@
                                             <constraint firstAttribute="width" constant="44" id="xn9-Hf-1MF"/>
                                         </constraints>
                                         <state key="normal" title="微信"/>
+                                        <connections>
+                                            <action selector="WeChatBtnClick:" destination="h72-9k-JEe" eventType="touchUpInside" id="sia-Qe-AnN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RO-sd-9Kz">
                                         <rect key="frame" x="17" y="35" width="44" height="44"/>
@@ -58,6 +61,9 @@
                                             <constraint firstAttribute="width" constant="44" id="vo5-Lv-b9d"/>
                                         </constraints>
                                         <state key="normal" title="微博"/>
+                                        <connections>
+                                            <action selector="WeiBoBtnClick:" destination="h72-9k-JEe" eventType="touchUpInside" id="eNN-kX-KdT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

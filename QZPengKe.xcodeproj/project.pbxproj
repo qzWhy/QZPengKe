@@ -17,6 +17,9 @@
 		26227BF91FFC9F0500731A3E /* QZHomeSearchResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26227BF71FFC9F0500731A3E /* QZHomeSearchResultViewController.xib */; };
 		26227C001FFCAA2C00731A3E /* QZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26227BFE1FFCAA2C00731A3E /* QZCollectionViewCell.m */; };
 		26227C011FFCAA2C00731A3E /* QZCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26227BFF1FFCAA2C00731A3E /* QZCollectionViewCell.xib */; };
+		26256AC920089D9F003E27F5 /* MobScreenshotCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26256AC420089D9F003E27F5 /* MobScreenshotCenter.m */; };
+		26256ACA20089D9F003E27F5 /* MobUIScreenshotShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 26256AC620089D9F003E27F5 /* MobUIScreenshotShare.m */; };
+		26256ACB20089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26256AC820089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m */; };
 		2646C5C72006045800AFB4E1 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5C62006045700AFB4E1 /* libicucore.tbd */; };
 		2646C5C92006046300AFB4E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5C82006046300AFB4E1 /* libz.tbd */; };
 		2646C5CB2006047200AFB4E1 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5CA2006047200AFB4E1 /* libstdc++.tbd */; };
@@ -77,6 +80,12 @@
 		26227BFD1FFCAA2C00731A3E /* QZCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZCollectionViewCell.h; sourceTree = "<group>"; };
 		26227BFE1FFCAA2C00731A3E /* QZCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZCollectionViewCell.m; sourceTree = "<group>"; };
 		26227BFF1FFCAA2C00731A3E /* QZCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QZCollectionViewCell.xib; sourceTree = "<group>"; };
+		26256AC320089D9F003E27F5 /* MobScreenshotCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobScreenshotCenter.h; sourceTree = "<group>"; };
+		26256AC420089D9F003E27F5 /* MobScreenshotCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobScreenshotCenter.m; sourceTree = "<group>"; };
+		26256AC520089D9F003E27F5 /* MobUIScreenshotShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobUIScreenshotShare.h; sourceTree = "<group>"; };
+		26256AC620089D9F003E27F5 /* MobUIScreenshotShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobUIScreenshotShare.m; sourceTree = "<group>"; };
+		26256AC720089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBUIScreenshotShareCollectionViewCell.h; sourceTree = "<group>"; };
+		26256AC820089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBUIScreenshotShareCollectionViewCell.m; sourceTree = "<group>"; };
 		2646C5C62006045700AFB4E1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		2646C5C82006046300AFB4E1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2646C5CA2006047200AFB4E1 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -280,6 +289,19 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		26256AC220089D9F003E27F5 /* MobScreenShare */ = {
+			isa = PBXGroup;
+			children = (
+				26256AC320089D9F003E27F5 /* MobScreenshotCenter.h */,
+				26256AC420089D9F003E27F5 /* MobScreenshotCenter.m */,
+				26256AC520089D9F003E27F5 /* MobUIScreenshotShare.h */,
+				26256AC620089D9F003E27F5 /* MobUIScreenshotShare.m */,
+				26256AC720089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.h */,
+				26256AC820089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m */,
+			);
+			path = MobScreenShare;
+			sourceTree = "<group>";
+		};
 		265AA44C1FFB6CBF001E7C2D /* QZSearchBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +381,7 @@
 		268FE9231FECE90200DD019D /* QZUtils */ = {
 			isa = PBXGroup;
 			children = (
+				26256AC220089D9F003E27F5 /* MobScreenShare */,
 				268FE9241FECE90200DD019D /* AlertUtil */,
 				268FE9251FECE90200DD019D /* BarButtonUtil */,
 				268FE9261FECE90200DD019D /* Categories */,
@@ -762,9 +785,15 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QZPengKe/Pods-QZPengKe-resources.sh",
+				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
+				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Optional/ShareSDKConfigFile.bundle",
+				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Optional/ShareSDKUI.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -811,12 +840,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26256ACA20089D9F003E27F5 /* MobUIScreenshotShare.m in Sources */,
 				268FE92F1FECE90200DD019D /* UIColor+Expanded.m in Sources */,
 				268FE93F1FECF32900DD019D /* QZMineViewController.m in Sources */,
 				26A3FF901FF4CEA900FD0366 /* QZLestSideslipSecondCell.m in Sources */,
 				26227BF81FFC9F0500731A3E /* QZHomeSearchResultViewController.m in Sources */,
 				26A3FF881FF4CDCD00FD0366 /* QZShopHomeViewController.m in Sources */,
 				2611479520048A4800E64CD7 /* QZAvatarButton.m in Sources */,
+				26256ACB20089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m in Sources */,
 				26AFE12E1FF39FA500E3C9FF /* QZTableView.m in Sources */,
 				26E37D611FF09E5A007FEE0D /* QZTabBarController.m in Sources */,
 				268FE8C71FECD3D400DD019D /* ViewController.m in Sources */,
@@ -824,6 +855,7 @@
 				2601DFA31FFDFB9E00EE2638 /* QZSearchResultController.m in Sources */,
 				268FE9391FECEC7200DD019D /* QZBaseTableViewController.m in Sources */,
 				26D2508F1FF1F77F009A0FF4 /* LaunchDemo.m in Sources */,
+				26256AC920089D9F003E27F5 /* MobScreenshotCenter.m in Sources */,
 				26AFE1271FF370BC00E3C9FF /* QZLeftSlideViewController.m in Sources */,
 				265AA44F1FFB6CFE001E7C2D /* QZSearchBarViewController.m in Sources */,
 				26AFE12A1FF387EA00E3C9FF /* UIView_extra.m in Sources */,

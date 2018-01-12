@@ -8,9 +8,11 @@
 
 #import "QZMineViewController.h"
 #import "QZAvatarButton.h"
-
+#import "QZNavigtaionController.h"
 @interface QZMineViewController ()
 @property (weak, nonatomic) IBOutlet QZAvatarButton *avatarButton;
+
+
 
 @end
 
@@ -21,7 +23,8 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)avatarButtonAction:(id)sender {
-    
+    QZNavigtaionController *nav = StoryboardAcquiredController(@"QZLogin", @"QZNavgationControllerLogin");
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
