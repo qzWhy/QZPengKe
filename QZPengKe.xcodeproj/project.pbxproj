@@ -27,6 +27,7 @@
 		2646C5CF2006049E00AFB4E1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5CE2006049E00AFB4E1 /* libsqlite3.tbd */; };
 		2646C5D1200604AE00AFB4E1 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5D0200604AE00AFB4E1 /* ImageIO.framework */; };
 		265AA44F1FFB6CFE001E7C2D /* QZSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265AA44E1FFB6CFE001E7C2D /* QZSearchBarViewController.m */; };
+		265C149B2011899000A46F08 /* HZSigmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 265C149A2011899000A46F08 /* HZSigmentView.m */; };
 		268FE8AD1FECB82E00DD019D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AC1FECB82E00DD019D /* main.m */; };
 		268FE8B01FECB82E00DD019D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AF1FECB82E00DD019D /* AppDelegate.m */; };
 		268FE8B61FECB82E00DD019D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE8B41FECB82E00DD019D /* Main.storyboard */; };
@@ -94,6 +95,8 @@
 		2646C5D0200604AE00AFB4E1 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		265AA44D1FFB6CFE001E7C2D /* QZSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZSearchBarViewController.h; sourceTree = "<group>"; };
 		265AA44E1FFB6CFE001E7C2D /* QZSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZSearchBarViewController.m; sourceTree = "<group>"; };
+		265C14992011899000A46F08 /* HZSigmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZSigmentView.h; sourceTree = "<group>"; };
+		265C149A2011899000A46F08 /* HZSigmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZSigmentView.m; sourceTree = "<group>"; };
 		268FE8A81FECB82E00DD019D /* QZPengKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QZPengKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268FE8AC1FECB82E00DD019D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		268FE8AE1FECB82E00DD019D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -311,6 +314,15 @@
 			path = QZSearchBar;
 			sourceTree = "<group>";
 		};
+		265C14982011899000A46F08 /* HLSigmentView */ = {
+			isa = PBXGroup;
+			children = (
+				265C14992011899000A46F08 /* HZSigmentView.h */,
+				265C149A2011899000A46F08 /* HZSigmentView.m */,
+			);
+			path = HLSigmentView;
+			sourceTree = "<group>";
+		};
 		268FE89F1FECB82E00DD019D = {
 			isa = PBXGroup;
 			children = (
@@ -381,32 +393,11 @@
 		268FE9231FECE90200DD019D /* QZUtils */ = {
 			isa = PBXGroup;
 			children = (
+				265C14982011899000A46F08 /* HLSigmentView */,
 				26256AC220089D9F003E27F5 /* MobScreenShare */,
-				268FE9241FECE90200DD019D /* AlertUtil */,
-				268FE9251FECE90200DD019D /* BarButtonUtil */,
 				268FE9261FECE90200DD019D /* Categories */,
-				268FE9291FECE90200DD019D /* CrashUtil */,
-				268FE92A1FECE90200DD019D /* ErrorUtil */,
-				268FE92B1FECE90200DD019D /* ImageUtil */,
-				268FE92C1FECE90200DD019D /* KeyboardUtil */,
-				268FE92D1FECE90200DD019D /* ResponderUtil */,
-				268FE92E1FECE90200DD019D /* StringUtil */,
 			);
 			path = QZUtils;
-			sourceTree = "<group>";
-		};
-		268FE9241FECE90200DD019D /* AlertUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AlertUtil;
-			sourceTree = "<group>";
-		};
-		268FE9251FECE90200DD019D /* BarButtonUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BarButtonUtil;
 			sourceTree = "<group>";
 		};
 		268FE9261FECE90200DD019D /* Categories */ = {
@@ -416,48 +407,6 @@
 				268FE9281FECE90200DD019D /* UIColor+Expanded.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		268FE9291FECE90200DD019D /* CrashUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CrashUtil;
-			sourceTree = "<group>";
-		};
-		268FE92A1FECE90200DD019D /* ErrorUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ErrorUtil;
-			sourceTree = "<group>";
-		};
-		268FE92B1FECE90200DD019D /* ImageUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ImageUtil;
-			sourceTree = "<group>";
-		};
-		268FE92C1FECE90200DD019D /* KeyboardUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = KeyboardUtil;
-			sourceTree = "<group>";
-		};
-		268FE92D1FECE90200DD019D /* ResponderUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ResponderUtil;
-			sourceTree = "<group>";
-		};
-		268FE92E1FECE90200DD019D /* StringUtil */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StringUtil;
 			sourceTree = "<group>";
 		};
 		268FE9301FECEB6E00DD019D /* QZMainProModule */ = {
@@ -859,6 +808,7 @@
 				26AFE1271FF370BC00E3C9FF /* QZLeftSlideViewController.m in Sources */,
 				265AA44F1FFB6CFE001E7C2D /* QZSearchBarViewController.m in Sources */,
 				26AFE12A1FF387EA00E3C9FF /* UIView_extra.m in Sources */,
+				265C149B2011899000A46F08 /* HZSigmentView.m in Sources */,
 				26A3FF7D1FF4962900FD0366 /* QZLestSideslipController.m in Sources */,
 				26227C001FFCAA2C00731A3E /* QZCollectionViewCell.m in Sources */,
 				2611479D2004B23A00E64CD7 /* QZLoginController.m in Sources */,

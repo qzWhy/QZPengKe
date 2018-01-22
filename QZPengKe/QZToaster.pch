@@ -22,6 +22,8 @@ static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yap
 #define QZLightGrayColor [UIColor lightGrayColor]
 #define QZFontSIYUAN_NORMAL(CGFloat) [UIFont fontWithName:@"SourceHanSansCN-Normal" size:CGFloat]
 
+
+
 //16进制颜色
 #define QZHEXCOLOR(str) [UIColor colorWithHexString:str]
 
@@ -57,5 +59,8 @@ static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yap
 #define DEVICE_SYSTEM_VERSION   [[UIDevice currentDevice] systemVersion]
 
 #define DEVICE_VERSION  ([[UIDevice currentDevice].systemVersion doubleValue])
+
+#define scaleH (SCREEN_HEIGHT/1334.f)
+#define scaleW (SCREEN_WIDTH/750.f)
 
 #endif /* QZToaster_pch */

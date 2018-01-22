@@ -16,13 +16,18 @@
 #define kAdH 200   //后面要放在navgationBar里面
 #define kAdH2 160
 #define kTitleBtnCount 2
-@interface QZHomePgViewController ()
+@interface QZHomePgViewController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
 
 @property (nonatomic, strong) NSMutableArray *imageArray;
 
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
+
+@property (nonatomic, strong) UIButton *kxBtn;
+
+@property (nonatomic, strong) UIButton *selectedBtn;
+//@property (nonatomic, strong) HZSigmentView *sigment;
 
 @end
 
@@ -59,31 +64,31 @@
     [self.view addSubview:mainScrollView];
     self.mainScrollView = mainScrollView;
     
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT + 300)];
-    
-    [mainScrollView addSubview:contentView];
-    
-    CGFloat adheight;
-    if (QZkScale <= 2) {
-        adheight = kAdH2;
-    } else {
-        adheight = kAdH;
-    }
-    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, adheight) imageURLStringsGroup:self.imageArray];
+    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300*SCREEN_HEIGHT/1334.f) imageURLStringsGroup:self.imageArray];
     self.cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
     self.cycleScrollView.placeholderImage = [UIImage imageNamed:@"Default"];
     self.cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     self.cycleScrollView.autoScrollTimeInterval = 2;
     __weak typeof(self) weakSelf = self;
     self.cycleScrollView.clickItemOperationBlock = ^(NSInteger A) {};
-    [contentView addSubview:self.cycleScrollView];
+    [self.mainScrollView addSubview:self.cycleScrollView];
     
     [self creatSearchBar];
     
     [self initDataType:@"1"];
     
+    //蒸烤分类
+    [self creatSigment];
+    
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.kxBtn.frame) + 20 *scaleH, SCREEN_WIDTH*2, SCREEN_HEIGHT)];
+    [self.mainScrollView addSubview:bottomView];
+    
+    
+    
 }
-
+/**
+ *  创建搜索框
+ */
 
 - (void)creatSearchBar
 {
@@ -111,12 +116,52 @@
     
     self.navigationItem.titleView = searchBar;
 }
-
+/**
+ *  跳转搜索控制器
+ */
 - (void)openSearchUI
 {
     QZSearchBarViewController *searchVC = [QZSearchBarViewController new];
     [self.navigationController pushViewController:searchVC animated:NO];
 }
+
+//创建sigment
+- (void)creatSigment
+{
+    UIButton *KXBtn = [[UIButton alloc] init];
+    KXBtn.frame = CGRectMake(0, CGRectGetMaxY(self.cycleScrollView.frame) + 20*scaleH, 150*scaleW, 100*scaleH);
+    KXBtn.centerX = SCREEN_WIDTH /4.f;
+    [KXBtn setBackgroundImage:[UIImage imageNamed:@"KaoTitleImg"] forState:UIControlStateNormal];
+    [KXBtn setBackgroundImage:[UIImage imageNamed:@"KaoTitleSeleImg"] forState:UIControlStateDisabled];
+    KXBtn.tag = 1000;
+    self.selectedBtn = KXBtn;
+    KXBtn.enabled = NO;
+    [KXBtn addTarget:self action:@selector(XBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.mainScrollView addSubview:KXBtn];
+    self.kxBtn = KXBtn;
+    
+    
+    UIButton *ZXBtn = [[UIButton alloc] init];
+    ZXBtn.frame = CGRectMake(0, CGRectGetMaxY(self.cycleScrollView.frame) + 20*scaleH, 150*scaleW, 100*scaleH);
+    ZXBtn.centerX = SCREEN_WIDTH*3 /4.f;
+    ZXBtn.tag = 10001;
+//    ZXBtn.enabled = NO;
+    [ZXBtn setBackgroundImage:[UIImage imageNamed:@"ZhengTitleImg"] forState:UIControlStateNormal];
+    [ZXBtn setBackgroundImage:[UIImage imageNamed:@"ZhengTitleSeleImg"] forState:UIControlStateDisabled];
+    [ZXBtn addTarget:self action:@selector(XBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.mainScrollView addSubview:ZXBtn];
+}
+- (void)XBtnClick:(UIButton *)btn
+{
+    self.selectedBtn.enabled = YES;
+    btn.enabled = NO;
+    self.selectedBtn = btn;
+    
+}
+
+/**
+ * 数据请求
+ */
 
 - (void)initDataType:(NSString *)type
 {
@@ -154,11 +199,15 @@
         }];
     }
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 代理方法
+/**
+ *  UIScrollView的代理方法
+ */
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
 }
+
 - (NSMutableArray *)imageArray
 {
     if (!_imageArray) {
