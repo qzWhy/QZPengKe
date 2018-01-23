@@ -62,5 +62,6 @@ static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yap
 
 #define scaleH (SCREEN_HEIGHT/1334.f)
 #define scaleW (SCREEN_WIDTH/750.f)
+#define HomePageCollectionCellReusedID @"QZTutorialCollectionViewCell"
 
 #endif /* QZToaster_pch */

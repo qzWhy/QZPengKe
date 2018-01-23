@@ -11,12 +11,15 @@
 #import "SDCycleScrollView.h"
 #import "HYBNetworking.h"
 #import "QZSearchBarViewController.h"
+#import "MUCollectionViewFlowLayout.h"
+#import "QZTuttorialHomePageModel.h"
+#import "QZTutorialCollectionViewCell.h"
 #define QZkScale [UIScreen mainScreen].scale
 
 #define kAdH 200   //后面要放在navgationBar里面
 #define kAdH2 160
 #define kTitleBtnCount 2
-@interface QZHomePgViewController ()<UIScrollViewDelegate>
+@interface QZHomePgViewController ()<UIScrollViewDelegate,MUCollectionViewFlowLayoutDelegate,UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic, strong) UIScrollView *mainScrollView;
 
@@ -27,7 +30,24 @@
 @property (nonatomic, strong) UIButton *kxBtn;
 
 @property (nonatomic, strong) UIButton *selectedBtn;
+
+@property (nonatomic, strong) UICollectionView *firstCollectionView;
+
+@property (nonatomic, strong) UICollectionView *secondCollectionView;
 //@property (nonatomic, strong) HZSigmentView *sigment;
+@property (nonatomic, strong) NSMutableArray *urlArray;
+@property (nonatomic, strong) NSMutableArray *pidArray;
+@property (nonatomic, strong) NSMutableArray *typeArray;
+
+///烤箱数组
+@property (nonatomic, strong) NSMutableArray *KaoXiangArray;
+
+///蒸箱数组
+@property (nonatomic, strong) NSMutableArray *ZhengXiangArray;
+
+
+
+@property (nonatomic, assign) BOOL isLoad;
 
 @end
 
@@ -73,17 +93,35 @@
     self.cycleScrollView.clickItemOperationBlock = ^(NSInteger A) {};
     [self.mainScrollView addSubview:self.cycleScrollView];
     
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.kxBtn.frame) + 20 *scaleH, SCREEN_WIDTH*2, SCREEN_HEIGHT)];
+    [self.mainScrollView addSubview:bottomView];
+    
+    MUCollectionViewFlowLayout *flowLayout = [[MUCollectionViewFlowLayout alloc] init];
+    flowLayout.minimumLineSpacing = 5;
+    flowLayout.minimumInteritemSpacing = 5;
+    flowLayout.sectionInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+    flowLayout.columnCount = 1;
+    
+    UICollectionView *firstCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0 , 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:flowLayout];
+    
+    firstCollectionView.dataSource = self;
+    firstCollectionView.delegate = self;
+    
+    firstCollectionView.scrollEnabled = NO;
+    firstCollectionView.backgroundColor = [UIColor whiteColor];
+    [bottomView addSubview:firstCollectionView];
+    
+    [firstCollectionView registerNib:[UINib nibWithNibName:@"QZTutorialCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:HomePageCollectionCellReusedID];
+    self.firstCollectionView = firstCollectionView;
+    
+    self.homePage = 1;
+    
     [self creatSearchBar];
     
     [self initDataType:@"1"];
     
     //蒸烤分类
     [self creatSigment];
-    
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.kxBtn.frame) + 20 *scaleH, SCREEN_WIDTH*2, SCREEN_HEIGHT)];
-    [self.mainScrollView addSubview:bottomView];
-    
-    
     
 }
 /**
@@ -172,6 +210,7 @@
     
     __weak QZHomePgViewController *weakSelf = self;
     if ([type isEqualToString:@"1"]) {
+        self.type = @"1";
         NSString *url = [NSString stringWithFormat:HOST_MAIN_APP];
         NSString *paramStr = [NSString stringWithFormat:@"{\"uid\":\"%@\",\"limit\":\"%@\",\"page\":\"%@\",\"type\":\"%@\"}",@"3",@"10",page,type];
         NSDictionary *paramDict = @{@"CODE":@(156),@"JSON":paramStr};
@@ -180,18 +219,36 @@
             NSArray *array = [[dict objectForKey:@"data"] objectForKey:@"info"];
             
             NSMutableArray *dataArray = [NSMutableArray array];
+            if (weakSelf.isLoad == NO) {
+                [weakSelf.KaoXiangArray removeAllObjects];
+            }
             
             for (int i = 0; i < array.count; i++) {
-                
+                QZTuttorialHomePageModel *model = [QZTuttorialHomePageModel mj_objectWithKeyValues:array[i]];
+                [dataArray addObject:model];
             }
+            [weakSelf.urlArray removeAllObjects];
+            [weakSelf.pidArray removeAllObjects];
+            [weakSelf.typeArray removeAllObjects];
+            
             NSArray *imageArray = [[dict objectForKey:@"data"] objectForKey:@"ad"];
             for (NSInteger i = imageArray.count -1; i >= 0; i--) {
                 NSDictionary *Dic = imageArray[i];
                 [weakSelf.imageArray addObject:[Dic objectForKey:@"ad_pic"]];
+                [weakSelf.urlArray addObject:[Dic objectForKey:@"ad_url"]];
+                [weakSelf.pidArray addObject:[Dic objectForKey:@"pid"]];
+                [weakSelf.typeArray addObject:[Dic objectForKey:@"type"]];
             }
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 weakSelf.cycleScrollView.localizationImageNamesGroup = weakSelf.imageArray;
+                if (weakSelf.isLoad == NO) {
+                    self.KaoXiangArray = [NSMutableArray arrayWithArray:dataArray];
+                } else{
+                    [self.KaoXiangArray addObjectsFromArray:dataArray];
+                }
+                [self.firstCollectionView reloadData];
+                
             });
             
         } fail:^(NSError *error) {
@@ -199,6 +256,32 @@
         }];
     }
 }
+
+ - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if (collectionView == self.firstCollectionView) {
+        if ([self.type isEqualToString:@"1"]) {
+            return self.KaoXiangArray.count;
+        }
+    }
+    return 0;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    QZTutorialCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:HomePageCollectionCellReusedID forIndexPath:indexPath];
+    QZTuttorialHomePageModel *model = [QZTuttorialHomePageModel new];
+    if (collectionView == self.firstCollectionView) {
+        if ([self.type isEqualToString:@"1"]) {
+            model = [self.KaoXiangArray objectAtIndex:indexPath.item];
+        }
+    }
+    QZkSDWebImage(cell.bgImg, model.img);
+    cell.titleLabel.text = model.name;
+    cell.playBtn.tag = indexPath.row;
+    return cell;
+}
+
 #pragma mark - 代理方法
 /**
  *  UIScrollView的代理方法
