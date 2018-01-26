@@ -1,5 +1,5 @@
 //
-//  QZTutorialHomePageController.h
+//  QZCommunityViewController.h
 //  QZPengKe
 //
 //  Created by 000 on 17/12/22.
@@ -8,6 +8,6 @@
 
 #import "QZBaseViewController.h"
 
-@interface QZTutorialHomePageController : QZBaseViewController
+@interface QZCommunityViewController : QZBaseViewController
 
 @end

@@ -14,7 +14,7 @@
 #import "UIImageView+WebCache.h"
 #import "MJExtension.h"
 #import "Masonry.h"
-
+#import "MJRefresh.h"
 static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yapi";
 #define QZBlackColor [UIColor blackColor]
 #define QZWhiteColor [UIColor whiteColor]
@@ -62,6 +62,7 @@ static NSString *const HOST_MAIN_APP = @"http://app.depelec.com.cn/index.php/Yap
 
 #define scaleH (SCREEN_HEIGHT/1334.f)
 #define scaleW (SCREEN_WIDTH/750.f)
+#define PicScalH (400*scaleH)
 #define HomePageCollectionCellReusedID @"QZTutorialCollectionViewCell"
 
 #endif /* QZToaster_pch */

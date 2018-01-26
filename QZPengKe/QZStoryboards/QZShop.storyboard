@@ -24,7 +24,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWK-UD-3Ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-839" y="-209"/>
+            <point key="canvasLocation" x="-1423" y="-188"/>
         </scene>
         <!--Search Result Controller-->
         <scene sceneID="Vtw-jJ-AXf">
@@ -131,7 +131,7 @@
                                         <rect key="frame" x="0.0" y="1" width="165" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LhY-dP-sju" id="AeD-a4-r8P">
-                                            <rect key="frame" x="0.0" y="0.0" width="165" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wE0-lv-nQR">
@@ -182,7 +182,7 @@
                                         <rect key="frame" x="0.0" y="1" width="110" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wNT-R1-HPO" id="a8C-DU-8oG">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-2W-Hud">

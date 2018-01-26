@@ -14,6 +14,7 @@
 #import "MUCollectionViewFlowLayout.h"
 #import "QZTuttorialHomePageModel.h"
 #import "QZTutorialCollectionViewCell.h"
+#import "QZHomePageDetailViewController.h"
 #define QZkScale [UIScreen mainScreen].scale
 
 #define kAdH 200   //后面要放在navgationBar里面
@@ -31,9 +32,13 @@
 
 @property (nonatomic, strong) UIButton *selectedBtn;
 
+@property (nonatomic, strong) UIView *contentView;
+
 @property (nonatomic, strong) UICollectionView *firstCollectionView;
 
 @property (nonatomic, strong) UICollectionView *secondCollectionView;
+
+@property (nonatomic, assign) CGFloat mainScrollViewOffset;
 //@property (nonatomic, strong) HZSigmentView *sigment;
 @property (nonatomic, strong) NSMutableArray *urlArray;
 @property (nonatomic, strong) NSMutableArray *pidArray;
@@ -44,8 +49,6 @@
 
 ///蒸箱数组
 @property (nonatomic, strong) NSMutableArray *ZhengXiangArray;
-
-
 
 @property (nonatomic, assign) BOOL isLoad;
 
@@ -77,24 +80,35 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(selectJumpData:) name:@"HMjumpUrl" object:nil];
     
     UIScrollView *mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0,SCREEN_WIDTH , SCREEN_HEIGHT)];
-    mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT + 300);
+    mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT + PicScalH);
     mainScrollView.delegate = self;
     mainScrollView.showsHorizontalScrollIndicator = NO;
     mainScrollView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:mainScrollView];
     self.mainScrollView = mainScrollView;
     
-    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300*SCREEN_HEIGHT/1334.f) imageURLStringsGroup:self.imageArray];
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT + PicScalH)];
+    [mainScrollView addSubview:contentView];
+    self.contentView = contentView;
+    
+    self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, PicScalH) imageURLStringsGroup:self.imageArray];
     self.cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
+    self.cycleScrollView.showPageControl = YES;
     self.cycleScrollView.placeholderImage = [UIImage imageNamed:@"Default"];
     self.cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     self.cycleScrollView.autoScrollTimeInterval = 2;
     __weak typeof(self) weakSelf = self;
     self.cycleScrollView.clickItemOperationBlock = ^(NSInteger A) {};
-    [self.mainScrollView addSubview:self.cycleScrollView];
+    [contentView addSubview:self.cycleScrollView];
+    
+    //蒸烤分类
+    [self creatSigment];
+    
+    
     
     UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.kxBtn.frame) + 20 *scaleH, SCREEN_WIDTH*2, SCREEN_HEIGHT)];
-    [self.mainScrollView addSubview:bottomView];
+    [self.contentView addSubview:bottomView];
+    
     
     MUCollectionViewFlowLayout *flowLayout = [[MUCollectionViewFlowLayout alloc] init];
     flowLayout.minimumLineSpacing = 5;
@@ -120,9 +134,7 @@
     
     [self initDataType:@"1"];
     
-    //蒸烤分类
-    [self creatSigment];
-    
+    [self addRefreshData];
 }
 /**
  *  创建搜索框
@@ -169,8 +181,8 @@
     UIButton *KXBtn = [[UIButton alloc] init];
     KXBtn.frame = CGRectMake(0, CGRectGetMaxY(self.cycleScrollView.frame) + 20*scaleH, 150*scaleW, 100*scaleH);
     KXBtn.centerX = SCREEN_WIDTH /4.f;
-    [KXBtn setBackgroundImage:[UIImage imageNamed:@"KaoTitleImg"] forState:UIControlStateNormal];
-    [KXBtn setBackgroundImage:[UIImage imageNamed:@"KaoTitleSeleImg"] forState:UIControlStateDisabled];
+    [KXBtn setBackgroundImage:[UIImage imageNamed:@"KaoTitleSeleImg"] forState:UIControlStateNormal];
+    [KXBtn setBackgroundImage:[UIImage imageNamed:@"KaoTitleImg"] forState:UIControlStateDisabled];
     KXBtn.tag = 1000;
     self.selectedBtn = KXBtn;
     KXBtn.enabled = NO;
@@ -184,8 +196,8 @@
     ZXBtn.centerX = SCREEN_WIDTH*3 /4.f;
     ZXBtn.tag = 10001;
 //    ZXBtn.enabled = NO;
-    [ZXBtn setBackgroundImage:[UIImage imageNamed:@"ZhengTitleImg"] forState:UIControlStateNormal];
-    [ZXBtn setBackgroundImage:[UIImage imageNamed:@"ZhengTitleSeleImg"] forState:UIControlStateDisabled];
+    [ZXBtn setBackgroundImage:[UIImage imageNamed:@"ZhengTitleSeleImg"] forState:UIControlStateNormal];
+    [ZXBtn setBackgroundImage:[UIImage imageNamed:@"ZhengTitleImg"] forState:UIControlStateDisabled];
     [ZXBtn addTarget:self action:@selector(XBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.mainScrollView addSubview:ZXBtn];
 }
@@ -257,6 +269,29 @@
     }
 }
 
+- (void)addRefreshData
+{
+    __weak typeof(self) weakSelf = self;
+    self.firstCollectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        weakSelf.isLoad = YES;
+        weakSelf.homePage ++;
+        [weakSelf initDataType:@"1"];
+    }];
+    self.mainScrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        weakSelf.isLoad = NO;
+        weakSelf.homePage = 1;
+        [weakSelf initDataType:weakSelf.type];
+    }];
+}
+/**
+ *  停止刷新
+ */
+- (void)endRefresh
+{
+    [self.mainScrollView.mj_header endRefreshing];
+    [self.firstCollectionView.mj_footer endRefreshing];
+}
+
  - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if (collectionView == self.firstCollectionView) {
@@ -281,6 +316,17 @@
     cell.playBtn.tag = indexPath.row;
     return cell;
 }
+#pragma mark - 进入详情页
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    QZHomePageDetailViewController *detailVC = [[QZHomePageDetailViewController alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return PicScalH;
+}
 
 #pragma mark - 代理方法
 /**
@@ -288,7 +334,24 @@
  */
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    
+    NSLog(@"--->%f",scrollView.contentOffset.y);
+    if (scrollView == self.firstCollectionView) {
+        if (scrollView.contentOffset.y <= 0.0) {
+            self.mainScrollView.scrollEnabled = YES;
+            self.firstCollectionView.scrollEnabled = NO;
+            NSLog(@"1--->%f",scrollView.contentOffset.y);
+        }
+    }
+    if (scrollView == self.mainScrollView) {
+        self.mainScrollViewOffset = scrollView.contentOffset.y;
+        
+        if (scrollView.contentOffset.y >= PicScalH + 100*scaleH) {
+            self.mainScrollView.scrollEnabled = NO;
+            self.firstCollectionView.scrollEnabled = YES;
+            NSLog(@"2--->%f",scrollView.contentOffset.y);
+            
+        }
+    }
 }
 
 - (NSMutableArray *)imageArray

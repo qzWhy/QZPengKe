@@ -20,6 +20,7 @@
 		26256AC920089D9F003E27F5 /* MobScreenshotCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 26256AC420089D9F003E27F5 /* MobScreenshotCenter.m */; };
 		26256ACA20089D9F003E27F5 /* MobUIScreenshotShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 26256AC620089D9F003E27F5 /* MobUIScreenshotShare.m */; };
 		26256ACB20089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26256AC820089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m */; };
+		263DD027201829C6006CF9F8 /* QZHomePageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263DD026201829C6006CF9F8 /* QZHomePageDetailViewController.m */; };
 		2646C5C72006045800AFB4E1 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5C62006045700AFB4E1 /* libicucore.tbd */; };
 		2646C5C92006046300AFB4E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5C82006046300AFB4E1 /* libz.tbd */; };
 		2646C5CB2006047200AFB4E1 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2646C5CA2006047200AFB4E1 /* libstdc++.tbd */; };
@@ -33,6 +34,13 @@
 		265D6889201588F300AE9814 /* QZTutorialCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 265D6887201588F300AE9814 /* QZTutorialCollectionViewCell.m */; };
 		265D688A201588F300AE9814 /* QZTutorialCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 265D6888201588F300AE9814 /* QZTutorialCollectionViewCell.xib */; };
 		265D688D2015CD4B00AE9814 /* QZTuttorialHomePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 265D688C2015CD4B00AE9814 /* QZTuttorialHomePageModel.m */; };
+		268E7278201AC36E0093CE0D /* QZHomePageDetailgraphicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E7274201AC36E0093CE0D /* QZHomePageDetailgraphicCell.m */; };
+		268E7279201AC36E0093CE0D /* QZHomePageDetailgraphicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268E7275201AC36E0093CE0D /* QZHomePageDetailgraphicCell.xib */; };
+		268E727A201AC36E0093CE0D /* QZHomePgDetailgrahicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E7277201AC36E0093CE0D /* QZHomePgDetailgrahicCell.m */; };
+		268E727D201AC3C40093CE0D /* QZHomePgDetailFinishedImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E727C201AC3C40093CE0D /* QZHomePgDetailFinishedImgCell.m */; };
+		268E7283201B0C0D0093CE0D /* QZCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E7281201B0C0D0093CE0D /* QZCommunityViewController.m */; };
+		268E7288201B0D0C0093CE0D /* QZCommunityHomePgHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268E7286201B0D0C0093CE0D /* QZCommunityHomePgHotCell.m */; };
+		268E7289201B0D0C0093CE0D /* QZCommunityHomePgHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 268E7287201B0D0C0093CE0D /* QZCommunityHomePgHotCell.xib */; };
 		268FE8AD1FECB82E00DD019D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AC1FECB82E00DD019D /* main.m */; };
 		268FE8B01FECB82E00DD019D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE8AF1FECB82E00DD019D /* AppDelegate.m */; };
 		268FE8B61FECB82E00DD019D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE8B41FECB82E00DD019D /* Main.storyboard */; };
@@ -42,7 +50,6 @@
 		268FE92F1FECE90200DD019D /* UIColor+Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE9281FECE90200DD019D /* UIColor+Expanded.m */; };
 		268FE9391FECEC7200DD019D /* QZBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE9381FECEC7200DD019D /* QZBaseTableViewController.m */; };
 		268FE93F1FECF32900DD019D /* QZMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE93E1FECF32900DD019D /* QZMineViewController.m */; };
-		268FE9481FECF38E00DD019D /* QZCommunityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268FE9471FECF38E00DD019D /* QZCommunityViewController.m */; };
 		268FE94B1FECF54900DD019D /* QZHomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE94A1FECF54900DD019D /* QZHomePage.storyboard */; };
 		268FE94D1FECFB1D00DD019D /* QZCommunity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE94C1FECFB1D00DD019D /* QZCommunity.storyboard */; };
 		268FE94F1FECFB3000DD019D /* QZTutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268FE94E1FECFB3000DD019D /* QZTutorial.storyboard */; };
@@ -91,6 +98,8 @@
 		26256AC620089D9F003E27F5 /* MobUIScreenshotShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobUIScreenshotShare.m; sourceTree = "<group>"; };
 		26256AC720089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MOBUIScreenshotShareCollectionViewCell.h; sourceTree = "<group>"; };
 		26256AC820089D9F003E27F5 /* MOBUIScreenshotShareCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MOBUIScreenshotShareCollectionViewCell.m; sourceTree = "<group>"; };
+		263DD025201829C6006CF9F8 /* QZHomePageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZHomePageDetailViewController.h; sourceTree = "<group>"; };
+		263DD026201829C6006CF9F8 /* QZHomePageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZHomePageDetailViewController.m; sourceTree = "<group>"; };
 		2646C5C62006045700AFB4E1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		2646C5C82006046300AFB4E1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2646C5CA2006047200AFB4E1 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
@@ -110,6 +119,18 @@
 		265D6888201588F300AE9814 /* QZTutorialCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QZTutorialCollectionViewCell.xib; sourceTree = "<group>"; };
 		265D688B2015CD4B00AE9814 /* QZTuttorialHomePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZTuttorialHomePageModel.h; sourceTree = "<group>"; };
 		265D688C2015CD4B00AE9814 /* QZTuttorialHomePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZTuttorialHomePageModel.m; sourceTree = "<group>"; };
+		268E7273201AC36E0093CE0D /* QZHomePageDetailgraphicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZHomePageDetailgraphicCell.h; sourceTree = "<group>"; };
+		268E7274201AC36E0093CE0D /* QZHomePageDetailgraphicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZHomePageDetailgraphicCell.m; sourceTree = "<group>"; };
+		268E7275201AC36E0093CE0D /* QZHomePageDetailgraphicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QZHomePageDetailgraphicCell.xib; sourceTree = "<group>"; };
+		268E7276201AC36E0093CE0D /* QZHomePgDetailgrahicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZHomePgDetailgrahicCell.h; sourceTree = "<group>"; };
+		268E7277201AC36E0093CE0D /* QZHomePgDetailgrahicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZHomePgDetailgrahicCell.m; sourceTree = "<group>"; };
+		268E727B201AC3C40093CE0D /* QZHomePgDetailFinishedImgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZHomePgDetailFinishedImgCell.h; sourceTree = "<group>"; };
+		268E727C201AC3C40093CE0D /* QZHomePgDetailFinishedImgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZHomePgDetailFinishedImgCell.m; sourceTree = "<group>"; };
+		268E7280201B0C0D0093CE0D /* QZCommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZCommunityViewController.h; sourceTree = "<group>"; };
+		268E7281201B0C0D0093CE0D /* QZCommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZCommunityViewController.m; sourceTree = "<group>"; };
+		268E7285201B0D0C0093CE0D /* QZCommunityHomePgHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZCommunityHomePgHotCell.h; sourceTree = "<group>"; };
+		268E7286201B0D0C0093CE0D /* QZCommunityHomePgHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZCommunityHomePgHotCell.m; sourceTree = "<group>"; };
+		268E7287201B0D0C0093CE0D /* QZCommunityHomePgHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QZCommunityHomePgHotCell.xib; sourceTree = "<group>"; };
 		268FE8A81FECB82E00DD019D /* QZPengKe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QZPengKe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		268FE8AC1FECB82E00DD019D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		268FE8AE1FECB82E00DD019D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,8 +148,6 @@
 		268FE9381FECEC7200DD019D /* QZBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZBaseTableViewController.m; sourceTree = "<group>"; };
 		268FE93D1FECF32900DD019D /* QZMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZMineViewController.h; sourceTree = "<group>"; };
 		268FE93E1FECF32900DD019D /* QZMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZMineViewController.m; sourceTree = "<group>"; };
-		268FE9461FECF38E00DD019D /* QZCommunityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QZCommunityViewController.h; sourceTree = "<group>"; };
-		268FE9471FECF38E00DD019D /* QZCommunityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QZCommunityViewController.m; sourceTree = "<group>"; };
 		268FE94A1FECF54900DD019D /* QZHomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QZHomePage.storyboard; sourceTree = "<group>"; };
 		268FE94C1FECFB1D00DD019D /* QZCommunity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QZCommunity.storyboard; sourceTree = "<group>"; };
 		268FE94E1FECFB3000DD019D /* QZTutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QZTutorial.storyboard; sourceTree = "<group>"; };
@@ -274,6 +293,8 @@
 			children = (
 				26227BF01FFC8A9000731A3E /* QZHomePgViewController.h */,
 				26227BF11FFC8A9000731A3E /* QZHomePgViewController.m */,
+				263DD025201829C6006CF9F8 /* QZHomePageDetailViewController.h */,
+				263DD026201829C6006CF9F8 /* QZHomePageDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -296,6 +317,7 @@
 		26227BFA1FFCA9E000731A3E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				268E7272201AC36E0093CE0D /* QZHomePgDetailCell */,
 				26227BFD1FFCAA2C00731A3E /* QZCollectionViewCell.h */,
 				26227BFE1FFCAA2C00731A3E /* QZCollectionViewCell.m */,
 				26227BFF1FFCAA2C00731A3E /* QZCollectionViewCell.xib */,
@@ -376,6 +398,54 @@
 				265D6888201588F300AE9814 /* QZTutorialCollectionViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		268E7272201AC36E0093CE0D /* QZHomePgDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+				268E7273201AC36E0093CE0D /* QZHomePageDetailgraphicCell.h */,
+				268E7274201AC36E0093CE0D /* QZHomePageDetailgraphicCell.m */,
+				268E7275201AC36E0093CE0D /* QZHomePageDetailgraphicCell.xib */,
+				268E7276201AC36E0093CE0D /* QZHomePgDetailgrahicCell.h */,
+				268E7277201AC36E0093CE0D /* QZHomePgDetailgrahicCell.m */,
+				268E727B201AC3C40093CE0D /* QZHomePgDetailFinishedImgCell.h */,
+				268E727C201AC3C40093CE0D /* QZHomePgDetailFinishedImgCell.m */,
+			);
+			path = QZHomePgDetailCell;
+			sourceTree = "<group>";
+		};
+		268E727E201B0C0D0093CE0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		268E727F201B0C0D0093CE0D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				268E7280201B0C0D0093CE0D /* QZCommunityViewController.h */,
+				268E7281201B0C0D0093CE0D /* QZCommunityViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		268E7282201B0C0D0093CE0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				268E7284201B0CCF0093CE0D /* QZCommunityHomePageCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		268E7284201B0CCF0093CE0D /* QZCommunityHomePageCells */ = {
+			isa = PBXGroup;
+			children = (
+				268E7285201B0D0C0093CE0D /* QZCommunityHomePgHotCell.h */,
+				268E7286201B0D0C0093CE0D /* QZCommunityHomePgHotCell.m */,
+				268E7287201B0D0C0093CE0D /* QZCommunityHomePgHotCell.xib */,
+			);
+			path = QZCommunityHomePageCells;
 			sourceTree = "<group>";
 		};
 		268FE89F1FECB82E00DD019D = {
@@ -480,8 +550,9 @@
 		268FE9311FECEBD000DD019D /* QZCommunity */ = {
 			isa = PBXGroup;
 			children = (
-				268FE9461FECF38E00DD019D /* QZCommunityViewController.h */,
-				268FE9471FECF38E00DD019D /* QZCommunityViewController.m */,
+				268E727E201B0C0D0093CE0D /* Model */,
+				268E727F201B0C0D0093CE0D /* ViewController */,
+				268E7282201B0C0D0093CE0D /* Views */,
 			);
 			path = QZCommunity;
 			sourceTree = "<group>";
@@ -771,6 +842,7 @@
 			files = (
 				268FE8BB1FECB82E00DD019D /* LaunchScreen.storyboard in Resources */,
 				26227BF91FFC9F0500731A3E /* QZHomeSearchResultViewController.xib in Resources */,
+				268E7289201B0D0C0093CE0D /* QZCommunityHomePgHotCell.xib in Resources */,
 				265D688A201588F300AE9814 /* QZTutorialCollectionViewCell.xib in Resources */,
 				268FE9551FED07A500DD019D /* QZMine.storyboard in Resources */,
 				268FE94D1FECFB1D00DD019D /* QZCommunity.storyboard in Resources */,
@@ -778,6 +850,7 @@
 				268FE94B1FECF54900DD019D /* QZHomePage.storyboard in Resources */,
 				268FE8B81FECB82E00DD019D /* Assets.xcassets in Resources */,
 				268FE8B61FECB82E00DD019D /* Main.storyboard in Resources */,
+				268E7279201AC36E0093CE0D /* QZHomePageDetailgraphicCell.xib in Resources */,
 				268FE9531FECFB4C00DD019D /* QZLogin.storyboard in Resources */,
 				268FE9511FECFB3E00DD019D /* QZShop.storyboard in Resources */,
 				268FE94F1FECFB3000DD019D /* QZTutorial.storyboard in Resources */,
@@ -794,6 +867,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QZPengKe/Pods-QZPengKe-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Required/ShareSDK.bundle",
 				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/Optional/ShareSDKConfigFile.bundle",
 				"${PODS_ROOT}/mob_sharesdk/SDK/ShareSDK/Support/PlatformSDK/SinaWeiboSDK/WeiboSDK.bundle",
@@ -848,6 +922,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268E7288201B0D0C0093CE0D /* QZCommunityHomePgHotCell.m in Sources */,
 				26256ACA20089D9F003E27F5 /* MobUIScreenshotShare.m in Sources */,
 				268FE92F1FECE90200DD019D /* UIColor+Expanded.m in Sources */,
 				268FE93F1FECF32900DD019D /* QZMineViewController.m in Sources */,
@@ -864,6 +939,8 @@
 				2601DFA31FFDFB9E00EE2638 /* QZSearchResultController.m in Sources */,
 				268FE9391FECEC7200DD019D /* QZBaseTableViewController.m in Sources */,
 				26D2508F1FF1F77F009A0FF4 /* LaunchDemo.m in Sources */,
+				263DD027201829C6006CF9F8 /* QZHomePageDetailViewController.m in Sources */,
+				268E727A201AC36E0093CE0D /* QZHomePgDetailgrahicCell.m in Sources */,
 				26256AC920089D9F003E27F5 /* MobScreenshotCenter.m in Sources */,
 				265D68852015889700AE9814 /* QZTutorialHomePageController.m in Sources */,
 				26AFE1271FF370BC00E3C9FF /* QZLeftSlideViewController.m in Sources */,
@@ -873,9 +950,10 @@
 				26A3FF7D1FF4962900FD0366 /* QZLestSideslipController.m in Sources */,
 				26227C001FFCAA2C00731A3E /* QZCollectionViewCell.m in Sources */,
 				2611479D2004B23A00E64CD7 /* QZLoginController.m in Sources */,
-				268FE9481FECF38E00DD019D /* QZCommunityViewController.m in Sources */,
+				268E727D201AC3C40093CE0D /* QZHomePgDetailFinishedImgCell.m in Sources */,
 				261147992004A2AC00E64CD7 /* QZPersonalInformationController.m in Sources */,
 				26E37D5D1FF09E52007FEE0D /* QZNavigtaionController.m in Sources */,
+				268E7283201B0C0D0093CE0D /* QZCommunityViewController.m in Sources */,
 				268FE8B01FECB82E00DD019D /* AppDelegate.m in Sources */,
 				26D250921FF218B9009A0FF4 /* QZBaseViewController.m in Sources */,
 				26D2508C1FF1F77F009A0FF4 /* ADItem.m in Sources */,
@@ -885,6 +963,7 @@
 				26D2508E1FF1F77F009A0FF4 /* ADWebVC.m in Sources */,
 				265D688D2015CD4B00AE9814 /* QZTuttorialHomePageModel.m in Sources */,
 				26A3FF8D1FF4CE5400FD0366 /* QZLestSideslipFirstCell.m in Sources */,
+				268E7278201AC36E0093CE0D /* QZHomePageDetailgraphicCell.m in Sources */,
 				2601DF9F1FFDBC6300EE2638 /* QZShopHomePageCollectionViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
